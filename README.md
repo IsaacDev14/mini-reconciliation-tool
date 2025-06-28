@@ -4,8 +4,7 @@ A simple web application that compares transactions between your internal system
 
 ---
 
-# Home Page
-![alt text](home.png)
+![alt text](App/home.png)
 
 ## Features
 
