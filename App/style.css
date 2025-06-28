@@ -1,0 +1,65 @@
+/* Custom styles for the font and specific table highlights */
+body {
+  font-family: "Inter", sans-serif;
+  background-image: linear-gradient(
+    to bottom right,
+    #e0f2fe,
+    #bfdbfe,
+    #93c5fd
+  ); /* Lighter blue gradient */
+  min-height: 100vh; /* Ensure body takes full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.matched-row {
+  background-color: #d4edda;
+} /* Green for matched */
+.internal-only-row {
+  background-color: #fff3cd;
+} /* Yellow for internal only */
+.provider-only-row {
+  background-color: #f8d7da;
+} /* Red for provider only */
+.mismatch-row {
+  background-color: #ffcccb;
+} /* Light red for mismatches */
+.loading-spinner {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  display: none; /* Hidden by default */
+  margin-left: 10px;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Alternating row colors for tables */
+table tbody tr:nth-child(odd) {
+  background-color: #f9fafb; /* Light gray for odd rows */
+}
+table tbody tr:nth-child(even) {
+  background-color: #ffffff; /* White for even rows */
+}
+/* Fade-in animation for results section */
+.results-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
